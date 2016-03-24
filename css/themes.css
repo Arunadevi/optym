@@ -1,0 +1,27 @@
+.sky{
+	--alpha:   #35a9e0;
+	--beta:    #0e5a9b;
+	--gamma:   #002646;
+	--delta:   #ceefff;
+}
+
+.rail{
+	--alpha:   #8bc53f;
+	--beta:    #247e2b;
+	--gamma:   #124a1b;
+	--delta:   #cde98f;
+}
+
+.geo{
+	--alpha:   #35a9e0;
+	--beta:    #0e5a9b;
+	--gamma:   #002646;
+	--delta:   #ceefff;
+}
+
+.haul{
+	--alpha:   #35a9e0;
+	--beta:    #0e5a9b;
+	--gamma:   #002646;
+	--delta:   #ceefff;
+}

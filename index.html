@@ -4,7 +4,8 @@
 
 <title>Theming</title>
 <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-<!-- <link href="css/style.css?v0.15" type="text/css" rel="stylesheet"> -->
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<link href="css/themes.css" type="text/css" rel="stylesheet">
 
 
 <link
@@ -15,9 +16,57 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/angular.min.js"></script>
+<script src="js/ui-bootstrap-tpls-0.12.0.min.js"></script>
 <script src="js/script.js" type="text/javascript"></script>
 
 </head>
-<body ng-app="themingClient"  >
+<body ng-app="themingClient" ng-controller="themingCtrl" >
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select theme
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" ng-click="theme='rail'">Rail</a></li>
+    <li><a href="#" ng-click="theme='geo'">Geo</a></li>
+    <li><a href="#" ng-click="theme='sky'">Sky</a></li>
+    <li><a href="#" ng-click="theme='haul'">Haul</a></li>
+  </ul>
+</div>
+<button type="button" class="btn btn-default" ng-click="openModal()">Show Modal</button>
+<script type="text/ng-template" id="myModalContent.html">
+	<div class="modal-content">
+			<div class="modal-header {{theme}}">
+				<button type="button" class="close" ng-click="cancel()"
+						aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Switch Velocity and Usage Analysis Card</h4>
+			</div>
+			<div class="modal-body">
+<div class="row form-row">
+				<div class="col-sm-5"><label for="usr">Dashboard:</label>
+</div>
+<div class="col-sm-7"><input type="text" class="form-control" id="usr">
+</div> 
+</div>
+<div class="row form-row">
+				<div class="col-sm-5"><label for="usr">Start Date:</label>
+</div>
+<div class="col-sm-7"><input type="text" class="form-control" id="usr">
+</div> 
+</div>
+<div class="row form-row">
+				<div class="col-sm-5"><label for="usr">End Date:</label>
+</div>
+<div class="col-sm-7"><input type="text" class="form-control" id="usr">
+</div> 
+</div>
+			</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default">Cancel</button>
+<button type="button" class="btn btn-info">Create</button>
+</div>
+	</div>
+</script>
+
 </body>
 </html>
